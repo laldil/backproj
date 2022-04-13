@@ -1,0 +1,33 @@
+#center{
+    margin: 2% 5%;
+    text-align: center;
+}
+.nav-item{
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
+}
+.navbar-brand{
+    font-size: 1.5rem;
+}
+.navbar-text{
+    font-size: 1.1rem;
+    margin-left: 1.2rem;
+}
+.card{
+    margin: 1% 1%;
+    display: inline-block;
+}
+.card-img-top{
+    height: auto;
+}
+.mybtn{
+    background-color: #aca1ff;
+    color: #332a78;
+    border-radius: 10%;
+    padding: 2%;
+}
+.mybtn:hover{
+    text-decoration: none;
+    color: #332a78;
+    background-color: #9b8dfc;
+}
