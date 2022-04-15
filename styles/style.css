@@ -20,14 +20,19 @@
 .card-img-top{
     height: auto;
 }
-.mybtn{
+.takeOrderbtn{
     background-color: #aca1ff;
     color: #332a78;
     border-radius: 10%;
     padding: 2%;
 }
-.mybtn:hover{
+.takeOrderbtn:hover{
     text-decoration: none;
     color: #332a78;
     background-color: #9b8dfc;
 }
+
+.collapseItem{
+    display: block;
+}
+.
