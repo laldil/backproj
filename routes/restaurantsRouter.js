@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
+const path = require('path')
 
 router
     .route('/')
-    .get((req,res) => res.sendFile('C:\\Users\\aldia\\Desktop\\project 1\\backproj\\restaurants.html'))
+    .get((req,res) => res.sendFile(path.resolve('restaurants.html')))
 
 module.exports = router
