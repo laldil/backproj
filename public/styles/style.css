@@ -42,3 +42,7 @@
 .card-header{
     background-color: #f2f2f2;
 }
+.mapResolution{
+    width:100%;
+    height:500px;
+}
