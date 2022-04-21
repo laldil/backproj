@@ -84,3 +84,12 @@
 .loginbtn:hover{
     opacity: 0.8;
 }
+.photoBar{
+    color: black;
+    height: 100vh;
+    background: url(https://i.imgur.com/o4wqOfu.jpeg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
