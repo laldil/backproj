@@ -52,7 +52,7 @@
     justify-content: center;
     display: block;
     color: #fff;
-    background: #573b8a;
+    background: #aca1ff;
     font-size: 1em;
     font-weight: bold;
     margin-top: 20px;
@@ -63,7 +63,7 @@
     cursor: pointer;
 }
 .signbutton:hover{
-    background: #6d44b8;
+    opacity: 0.8;
 }
 .login{
     height: 460px;

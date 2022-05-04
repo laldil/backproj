@@ -31,42 +31,22 @@
 
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
+
+                    <%if(hamburger != '') {%>
+                    <%hamburger.forEach(element => {%>
                     <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/3521394/57c421791ab9bda81fc043fd0ddbad17-450x300.jpeg" class="card-img-top" alt="...">
+                        <img src="<%=element.img%>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <hr>
-                            <h5 class="card-title">Double Cheeseburger</h5>
-                            <p class="card-text">2.70€ | <%-parseFloat(priceUSD*2.7).toFixed(2)%>$ | <%-parseFloat(priceKZT*2.70).toFixed(2)%>₸</p>
+                            <h5 class="card-title"><%=element.title%></h5>
+                            <p class="card-text"><%=element.price%> | <%-parseFloat(priceUSD*parseFloat(element.price)).toFixed(2)%>$ | <%-parseFloat(priceKZT*parseFloat(element.price)).toFixed(2)%>₸</p>
                             <a href="#" class="takeOrderbtn">Add to cart</a>
                         </div>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/3806315/b5f2dac58e3f486cd25c304c70982c91-450x300.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Big Tasty</h5>
-                            <p class="card-text">6.20€ | <%-parseFloat(priceUSD*6.20).toFixed(2)%>$ | <%-parseFloat(priceKZT*6.20).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/3805363/235b009729ac2384221c28f4e159802e-450x300.jpeg " class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Qazan</h5>
-                            <p class="card-text">1.40€ | <%-parseFloat(priceUSD*1.4).toFixed(2)%>$ | <%-parseFloat(priceKZT*1.4).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/3508859/9a6d6f9998ade80636a503cd76d1b863-450x300.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Big Mac</h5>
-                            <p class="card-text">4.60€ | <%-parseFloat(priceUSD*4.60).toFixed(2)%>$ | <%-parseFloat(priceKZT*4.60).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
+                    <%})%>
+                    <%}else{%>
+                        <h6>List is empty</h6>
+                    <%}%>
                 </div>
             </div>
         </div>
@@ -83,43 +63,21 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
 
+                    <%if(pizza != '') {%>
+                    <%pizza.forEach(element => {%>
                     <div class="card" style="width: 18rem;">
-                        <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/da0a83ee1bd248a28afe9565b59e1749_366x366.jpeg" class="card-img-top" alt="...">
+                        <img src="<%=element.img%>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <hr>
-                            <h5 class="card-title">Classic</h5>
-                            <p class="card-text">7.50€ | <%-parseFloat(priceUSD*7.50).toFixed(2)%>$ | <%-parseFloat(priceKZT*7.50).toFixed(2)%>₸</p>
+                            <h5 class="card-title"><%=element.title%></h5>
+                            <p class="card-text"><%=element.price%> | <%-parseFloat(priceUSD*parseFloat(element.price)).toFixed(2)%>$ | <%-parseFloat(priceKZT*parseFloat(element.price)).toFixed(2)%>₸</p>
                             <a href="#" class="takeOrderbtn">Add to cart</a>
                         </div>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/ba487bcb91034c02a216557d7f816ff4_366x366.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Cheese</h5>
-                            <p class="card-text">5.00€ | <%-parseFloat(priceUSD*5.00).toFixed(2)%>$ | <%-parseFloat(priceKZT*5.00).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/d1d22a2ee53e4a6ca901c203a3590b88_366x366.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Pesto</h5>
-                            <p class="card-text">7.00€ | <%-parseFloat(priceUSD*7.00).toFixed(2)%>$ | <%-parseFloat(priceKZT*7.00).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/87428dc1410f4688b2fa4739a077f73c_366x366.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Carbonara</h5>
-                            <p class="card-text">8.50€ | <%-parseFloat(priceUSD*8.50).toFixed(2)%>$ | <%-parseFloat(priceKZT*8.50).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
-
+                    <%})%>
+                    <%}else{%>
+                        <h6>List is empty</h6>
+                    <%}%>
                 </div>
             </div>
         </div>

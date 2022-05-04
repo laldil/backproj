@@ -93,3 +93,7 @@
     flex-direction: column;
     justify-content: center;
 }
+.photoBarText{
+    background-color: rgb(0,0,0,0.6);
+    color: white;
+}
