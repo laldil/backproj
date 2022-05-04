@@ -1,7 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const path = require('path')
-const http = require('http');
+const http = require('http')
+const cakeModel = require('../models/cakesModel')
+const hamburgerModel = require('../models/hamburgerModel')
+const pizzaModel = require('../models/pizzaModel')
 
 
 let currency
@@ -15,8 +18,19 @@ http.get(url, function (response){
 
 router
     .route('/')
-    .get((req,res) => res.render(path.resolve('views/index.ejs'),
-        {title: 'Menu', activePage: 'index',priceUSD:currency.rates.USD, priceKZT:currency.rates.KZT}))
+    .get(async (req,res) => {
+        const hamburger = await hamburgerModel.find()
+        const pizza = await pizzaModel.find()
+        res.render(path.resolve('views/index.ejs'),
+        {
+            title: 'Menu',
+            activePage: 'index',
+            priceUSD:currency.rates.USD,
+            priceKZT:currency.rates.KZT,
+            hamburger: hamburger,
+            pizza: pizza,
+        })
+    })
 
 
 module.exports = router

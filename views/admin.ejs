@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/style.css" type="text/css">
+</head>
+<body>
+<%- include ('modules/navbar')%>
+<section style="text-align: center">
+    <h1>Add fast food</h1>
+    <form action="/admin/addHamburger" method="POST">
+        <h5>Add hamburger</h5>
+        <input type="text" name="hamburgerTitle" placeholder="Title">
+        <input type="text" name="hamburgerPrice" placeholder="Price">
+        <input type="text" name="hamburgerImg" placeholder="Url">
+        <button type="submit"> Create </button>
+    </form>
+    <br>
+    <form action="/admin/addPizza" method="POST">
+        <h5>Add pizza</h5>
+        <input type="text" name="pizzaTitle" placeholder="Title">
+        <input type="text" name="pizzaPrice" placeholder="Price">
+        <input type="text" name="pizzaImg" placeholder="Url">
+        <button type="submit"> Create </button>
+    </form>
+    <br>
+    <form action="/admin/addSushi" method="POST">
+        <h5>Add pizza</h5>
+        <input type="text" name="sushiTitle" placeholder="Title">
+        <input type="text" name="sushiPrice" placeholder="Price">
+        <input type="text" name="sushiImg" placeholder="Url">
+        <button type="submit"> Create </button>
+    </form>
+</section>
+<hr>
+<section style="text-align: center">
+    <h1>Add healthy food</h1>
+    <form action="/admin/addSalad" method="POST">
+        <h5>Add salad</h5>
+        <input type="text" name="saladTitle" placeholder="Title">
+        <input type="text" name="saladPrice" placeholder="Price">
+        <input type="text" name="saladImg" placeholder="Url">
+        <button type="submit"> Create </button>
+    </form>
+    <br>
+    <form action="/admin/addSoup" method="POST">
+        <h5>Add soup</h5>
+        <input type="text" name="soupTitle" placeholder="Title">
+        <input type="text" name="soupPrice" placeholder="Price">
+        <input type="text" name="soupImg" placeholder="Url">
+        <button type="submit"> Create </button>
+    </form>
+    <br>
+    <form action="/admin/addPasta" method="POST">
+        <h5>Add pasta</h5>
+        <input type="text" name="pastaTitle" placeholder="Title">
+        <input type="text" name="pastaPrice" placeholder="Price">
+        <input type="text" name="pastaImg" placeholder="Url">
+        <button type="submit"> Create </button>
+    </form>
+</section>
+<hr>
+<section style="text-align: center">
+    <h1>Add desserts</h1>
+    <form action="/admin/addCakes" method="POST">
+        <h5>Add cakes</h5>
+        <input type="text" name="cakesTitle" placeholder="Title">
+        <input type="text" name="cakesPrice" placeholder="Price">
+        <input type="text" name="cakesImg" placeholder="Url">
+        <button type="submit"> Create </button>
+    </form>
+</section>
+<hr>
+<section style="text-align: center">
+    <h1>Add dishes</h1>
+    <form action="/admin/addDishes" method="POST">
+        <h5>Add dishes</h5>
+        <input type="text" name="dishesTitle" placeholder="Title">
+        <input type="text" name="dishesPrice" placeholder="Price">
+        <input type="text" name="dishesImg" placeholder="Url">
+        <button type="submit"> Create </button>
+    </form>
+    <br>
+    <h1>Add side dishes</h1>
+    <form action="/admin/addSideDishes" method="POST">
+        <h5>Add dishes</h5>
+        <input type="text" name="sideDishesTitle" placeholder="Title">
+        <input type="text" name="sideDishesPrice" placeholder="Price">
+        <input type="text" name="sideDishesImg" placeholder="Url">
+        <button type="submit"> Create </button>
+    </form>
+</section>
+<hr>
+<section style="text-align: center">
+    <h1>Add drinks</h1>
+    <form action="/admin/addCakes" method="POST">
+        <h5>Add drinks</h5>
+        <input type="text" name="drinksTitle" placeholder="Title">
+        <input type="text" name="drinksPrice" placeholder="Price">
+        <button type="submit"> Create </button>
+    </form>
+</section>
+</body>
+</html>
