@@ -2,9 +2,11 @@ const express = require('express')
 const router = express.Router()
 const path = require('path')
 const http = require('http')
-const cakeModel = require('../models/cakesModel')
 const hamburgerModel = require('../models/hamburgerModel')
 const pizzaModel = require('../models/pizzaModel')
+const sushiModel = require('../models/sushiModel')
+const saladModel = require('../models/saladModel')
+const soupModel = require('../models/soupModel')
 
 
 let currency
@@ -19,16 +21,17 @@ http.get(url, function (response){
 router
     .route('/')
     .get(async (req,res) => {
-        const hamburger = await hamburgerModel.find()
-        const pizza = await pizzaModel.find()
         res.render(path.resolve('views/index.ejs'),
         {
             title: 'Menu',
             activePage: 'index',
             priceUSD:currency.rates.USD,
             priceKZT:currency.rates.KZT,
-            hamburger: hamburger,
-            pizza: pizza,
+            hamburger: await hamburgerModel.find(),
+            pizza: await pizzaModel.find(),
+            sushi: await sushiModel.find(),
+            salad: await saladModel.find(),
+            soup: await soupModel.find(),
         })
     })
 

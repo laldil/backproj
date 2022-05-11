@@ -62,7 +62,6 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-
                     <%if(pizza != '') {%>
                     <%pizza.forEach(element => {%>
                     <div class="card" style="width: 18rem;">
@@ -92,43 +91,21 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
 
+                    <%if(sushi != '') {%>
+                    <%sushi.forEach(element => {%>
                     <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/1380157/9d4bb29551bd0fa9093dd90d03eec1ec-450x300.jpg" class="card-img-top" alt="...">
+                        <img src="<%=element.img%>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <hr>
-                            <h5 class="card-title">Bomb Platter</h5>
-                            <p class="card-text">20.00€ | <%-parseFloat(priceUSD*20.0).toFixed(2)%>$ | <%-parseFloat(priceKZT*20.0).toFixed(2)%>₸</p>
+                            <h5 class="card-title"><%=element.title%></h5>
+                            <p class="card-text"><%=element.price%> | <%-parseFloat(priceUSD*parseFloat(element.price)).toFixed(2)%>$ | <%-parseFloat(priceKZT*parseFloat(element.price)).toFixed(2)%>₸</p>
                             <a href="#" class="takeOrderbtn">Add to cart</a>
                         </div>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/3813301/9f999b75f4cf1949b1cce9b47e8bf00e-450x300.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Fusion Platter</h5>
-                            <p class="card-text">30.50€ | <%-parseFloat(priceUSD*30.50).toFixed(2)%>$ | <%-parseFloat(priceKZT*30.50).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/1380157/47c2fc42cde0e482038084141c1ce469-450x300.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Favorite Platter</h5>
-                            <p class="card-text">15.50€ | <%-parseFloat(priceUSD*15.50).toFixed(2)%>$ | <%-parseFloat(priceKZT*15.50).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/3538649/d75a67cc2591d6c4b9fef46d9bbec9b6-450x300.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Two Way platter</h5>
-                            <p class="card-text">9.50€ | <%-parseFloat(priceUSD*9.50).toFixed(2)%>$ | <%-parseFloat(priceKZT*9.50).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
-
+                    <%})%>
+                    <%}else{%>
+                        <h6>List is empty</h6>
+                    <%}%>
                 </div>
             </div>
         </div>
@@ -151,33 +128,22 @@
 
             <div id="collapse3" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
+
+                    <%if(salad != '') {%>
+                    <%salad.forEach(element => {%>
                     <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/1380157/79a4d51a674d8c4bdb2f1ff0b7c40f1f-450x300.jpeg" class="card-img-top" alt="...">
+                        <img src="<%=element.img%>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <hr>
-                            <h5 class="card-title">Caesar</h5>
-                            <p class="card-text">4.60€ | <%-parseFloat(priceUSD*4.60).toFixed(2)%>$ | <%-parseFloat(priceKZT*4.60).toFixed(2)%>₸</p>
+                            <h5 class="card-title"><%=element.title%></h5>
+                            <p class="card-text"><%=element.price%> | <%-parseFloat(priceUSD*parseFloat(element.price)).toFixed(2)%>$ | <%-parseFloat(priceKZT*parseFloat(element.price)).toFixed(2)%>₸</p>
                             <a href="#" class="takeOrderbtn">Add to cart</a>
                         </div>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/1380157/4ec266ab5616f51e0cb36348888e8e2d-450x300.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Greek</h5>
-                            <p class="card-text">3.60€ | <%-parseFloat(priceUSD*3.60).toFixed(2)%>$ | <%-parseFloat(priceKZT*3.60).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/1380157/2d2f8707083e9b21d39eb3c2f8425889-450x300.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Nicoise</h5>
-                            <p class="card-text">2.00€ | <%-parseFloat(priceUSD*2.0).toFixed(2)%>$ | <%-parseFloat(priceKZT*2.0).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
+                    <%})%>
+                    <%}else{%>
+                        <h6>List is empty</h6>
+                    <%}%>
                 </div>
             </div>
         </div>
@@ -191,33 +157,22 @@
             </div>
             <div id="collapse4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
+
+                    <%if(soup != '') {%>
+                    <%soup.forEach(element => {%>
                     <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/1380157/70c76c68ce177ecd6dbcab5546efda53-450x300.jpeg" class="card-img-top" alt="...">
+                        <img src="<%=element.img%>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <hr>
-                            <h5 class="card-title">Tom Yam</h5>
-                            <p class="card-text">10.00€ | <%-parseFloat(priceUSD*10.0).toFixed(2)%>$ | <%-parseFloat(priceKZT*10.0).toFixed(2)%>₸</p>
+                            <h5 class="card-title"><%=element.title%></h5>
+                            <p class="card-text"><%=element.price%> | <%-parseFloat(priceUSD*parseFloat(element.price)).toFixed(2)%>$ | <%-parseFloat(priceKZT*parseFloat(element.price)).toFixed(2)%>₸</p>
                             <a href="#" class="takeOrderbtn">Add to cart</a>
                         </div>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/1380157/38ef89fad30b389a37934061e57f6606-450x300.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Broccoli cream soup</h5>
-                            <p class="card-text">6.29€ | <%-parseFloat(priceUSD*6.29).toFixed(2)%>$ | <%-parseFloat(priceKZT*6.29).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://eda.yandex/images/1380157/d1ed47e0a023cdd0c0e0ebcc62968b4b-450x300.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <hr>
-                            <h5 class="card-title">Borsch</h5>
-                            <p class="card-text">4.49€ | <%-parseFloat(priceUSD*4.49).toFixed(2)%>$ | <%-parseFloat(priceKZT*4.49).toFixed(2)%>₸</p>
-                            <a href="#" class="takeOrderbtn">Add to cart</a>
-                        </div>
-                    </div>
+                    <%})%>
+                    <%}else{%>
+                        <h6>List is empty</h6>
+                    <%}%>
                 </div>
             </div>
         </div>
@@ -583,6 +538,9 @@
   </footer>
   <!-- Footer -->
 </section>
+
+<%- include ('modules/footer')%>
+
 </body>
 
 </html>
