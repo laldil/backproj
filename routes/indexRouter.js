@@ -7,6 +7,11 @@ const pizzaModel = require('../models/pizzaModel')
 const sushiModel = require('../models/sushiModel')
 const saladModel = require('../models/saladModel')
 const soupModel = require('../models/soupModel')
+const pastaModel = require('../models/pastaModel')
+const cakesModel = require('../models/cakesModel')
+const dishesModel = require('../models/dishesModel')
+const sideDishesModel = require('../models/sideDishesModel')
+const drinksModel = require('../models/drinksModel')
 
 
 let currency
@@ -32,6 +37,11 @@ router
             sushi: await sushiModel.find(),
             salad: await saladModel.find(),
             soup: await soupModel.find(),
+            pasta: await pastaModel.find(),
+            cakes: await cakesModel.find(),
+            dishes: await dishesModel.find(),
+            sideDishes: await sideDishesModel.find(),
+            drinks: await drinksModel.find(),
         })
     })
 
