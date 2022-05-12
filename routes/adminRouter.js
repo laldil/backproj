@@ -22,5 +22,6 @@ router.post('/addHamburger', fastfoodController.addHamburger)
 router.post('/addSoup', healthyfoodController.addSoup)
 router.post('/addSalad', healthyfoodController.addSalad)
 router.post('/addPasta', healthyfoodController.addPasta)
+router.post('/deleteDrinks', drinksController.deleteDrinks)
 
 module.exports = router
