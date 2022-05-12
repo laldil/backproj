@@ -14,7 +14,6 @@
 <body>
 <%- include ('modules/navbar')%>
 <section style="text-align: center">
-    <h1>Add fast food</h1>
     <form action="/admin/addHamburger" method="POST">
         <h5>Add hamburger</h5>
         <input type="text" name="hamburgerTitle" placeholder="Title">
@@ -22,7 +21,6 @@
         <input type="text" name="hamburgerImg" placeholder="Url">
         <button type="submit"> Create </button>
     </form>
-    <br>
     <form action="/admin/addPizza" method="POST">
         <h5>Add pizza</h5>
         <input type="text" name="pizzaTitle" placeholder="Title">
@@ -30,18 +28,16 @@
         <input type="text" name="pizzaImg" placeholder="Url">
         <button type="submit"> Create </button>
     </form>
-    <br>
     <form action="/admin/addSushi" method="POST">
-        <h5>Add pizza</h5>
+        <h5>Add sushi</h5>
         <input type="text" name="sushiTitle" placeholder="Title">
         <input type="text" name="sushiPrice" placeholder="Price">
         <input type="text" name="sushiImg" placeholder="Url">
         <button type="submit"> Create </button>
     </form>
 </section>
-<hr>
+
 <section style="text-align: center">
-    <h1>Add healthy food</h1>
     <form action="/admin/addSalad" method="POST">
         <h5>Add salad</h5>
         <input type="text" name="saladTitle" placeholder="Title">
@@ -49,7 +45,6 @@
         <input type="text" name="saladImg" placeholder="Url">
         <button type="submit"> Create </button>
     </form>
-    <br>
     <form action="/admin/addSoup" method="POST">
         <h5>Add soup</h5>
         <input type="text" name="soupTitle" placeholder="Title">
@@ -57,7 +52,6 @@
         <input type="text" name="soupImg" placeholder="Url">
         <button type="submit"> Create </button>
     </form>
-    <br>
     <form action="/admin/addPasta" method="POST">
         <h5>Add pasta</h5>
         <input type="text" name="pastaTitle" placeholder="Title">
@@ -66,9 +60,8 @@
         <button type="submit"> Create </button>
     </form>
 </section>
-<hr>
+
 <section style="text-align: center">
-    <h1>Add desserts</h1>
     <form action="/admin/addCakes" method="POST">
         <h5>Add cakes</h5>
         <input type="text" name="cakesTitle" placeholder="Title">
@@ -77,9 +70,7 @@
         <button type="submit"> Create </button>
     </form>
 </section>
-<hr>
 <section style="text-align: center">
-    <h1>Add dishes</h1>
     <form action="/admin/addDishes" method="POST">
         <h5>Add dishes</h5>
         <input type="text" name="dishesTitle" placeholder="Title">
@@ -87,8 +78,6 @@
         <input type="text" name="dishesImg" placeholder="Url">
         <button type="submit"> Create </button>
     </form>
-    <br>
-    <h1>Add side dishes</h1>
     <form action="/admin/addSideDishes" method="POST">
         <h5>Add dishes</h5>
         <input type="text" name="sideDishesTitle" placeholder="Title">
@@ -97,14 +86,18 @@
         <button type="submit"> Create </button>
     </form>
 </section>
-<hr>
+
 <section style="text-align: center">
-    <h1>Add drinks</h1>
-    <form action="/admin/addCakes" method="POST">
+    <form action="/admin/addDrinks" method="POST">
         <h5>Add drinks</h5>
         <input type="text" name="drinksTitle" placeholder="Title">
         <input type="text" name="drinksPrice" placeholder="Price">
         <button type="submit"> Create </button>
+    </form>
+    <form action="/admin/deleteDrinks" method="POST">
+        <h3>Delete drinks</h3>
+        <input type="text" name="drinkDel" placeholder="Title">
+        <button type="submit"> Delete </button>
     </form>
 </section>
 </body>
