@@ -28,6 +28,8 @@ router
     .get(async (req,res) => {
         res.render(path.resolve('views/index.ejs'),
         {
+            isAuth: req.cookies.isAuth,
+            isAdmin: req.cookies.isAdmin,
             title: 'Menu',
             activePage: 'index',
             priceUSD:currency.rates.USD,
