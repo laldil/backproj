@@ -54,7 +54,7 @@ class authController {
             }
             user.roles.forEach(role => {
                 if (role === 'ADMIN') {
-                    res.cookies('isAdmin', true, {httpOnly: true})
+                    res.cookie('isAdmin', true, {httpOnly: true})
                 }
             })
             const validPassword = bcrypt.compareSync(password, user.password)
