@@ -10,7 +10,12 @@ const healthyfoodController = require('../controllers/healthyfoodController')
 router
     .route('/')
     .get((req,res) => res.render(path.resolve('views/admin.ejs'),
-        {title: 'Admin page', activePage: 'home'}))
+        {
+            title: 'Admin page',
+            activePage: 'home',
+            isAuth: req.cookies.isAuth,
+            isAdmin: req.cookies.isAdmin,
+        }))
 
 router.post('/addCakes', dessertsController.addCakes)
 router.post('/addDishes', dishesController.addDishes)

@@ -17,7 +17,14 @@
                 </li>
             </ul>
             <span class="navbar-text">
+                <%if(isAuth === 'true') {%>
+                <%if(isAdmin === 'true') {%>
+                    <a href="/admin" class="signbutton">Admin page</a>
+                <% } %>
+                    <a href="/sign/logout" class="signbutton">Log out</a>
+                <%} else {%>
                     <a href="sign" class="signbutton">Sign in</a>
+                <% } %>
             </span>
         </div>
     </nav>
