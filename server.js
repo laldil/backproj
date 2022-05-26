@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
 const roleMiddleware = require('./middlewares/roleMiddleware')
+const swaggerUi = require('swagger-ui-express'), swaggerDocument = require('./swagger.json')
 const ejs = require('ejs')
 const app = express()
 const PORT = 3000
@@ -11,6 +12,12 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cookieParser())
+app.use(
+    '/api-docs',
+    swaggerUi.serve,
+    swaggerUi.setup(swaggerDocument)
+);
+
 
 app.use('/', require('./routes/indexRouter'))
 app.use('/home', require('./routes/homeRouter'))

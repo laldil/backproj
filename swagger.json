@@ -1,0 +1,125 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Lubim Pokushat' API",
+    "description": "Lubim Pokushat' API",
+    "license": {
+      "name": "AITU",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Products",
+      "description": "API for product model"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/admin/addHamburger": {
+      "post": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Create new product model in database",
+        "parameters": [
+          {
+            "name": "Hamburger",
+            "in": "body",
+            "description": "Model that we want to create",
+            "schema": {
+              "$ref": "#/definitions/Hamburger"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New model is created",
+            "schema": {
+              "$ref": "#/definitions/Hamburger"
+            }
+          }
+        }
+      }
+    },
+    "/admin/deleteDrinks": {
+      "parameters": [
+        {
+          "name": "Drink title",
+          "in": "path",
+          "required": true,
+          "description": "Title of model that we want to delete",
+          "type": "string"
+        }
+      ],
+      "delete": {
+        "summary": "Delete drink with given title",
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "Model is deleted",
+            "schema": {
+              "$ref": "#/definitions/Drink"
+            }
+          }
+        }
+      }
+    }
+  },
+
+
+  "definitions": {
+    "Hamburger": {
+      "required": [
+        "title",
+        "price",
+        "img"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "img": {
+          "type": "string"
+        }
+      }
+    },
+    "Drink": {
+      "required": [
+        "title",
+        "price",
+        "img"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "img": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
