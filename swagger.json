@@ -87,36 +87,32 @@
   "definitions": {
     "Hamburger": {
       "required": [
-        "title",
-        "price",
-        "img"
+        "hamburgerTitle",
+        "hamburgerPrice",
+        "hamburgerImg"
       ],
       "properties": {
-        "title": {
+        "hamburgerTitle": {
           "type": "string"
         },
-        "price": {
+        "hamburgerPrice": {
           "type": "string"
         },
-        "img": {
+        "hamburgerImg": {
           "type": "string"
         }
       }
     },
     "Drink": {
       "required": [
-        "title",
-        "price",
-        "img"
+        "drinksTitle",
+        "drinksPrice"
       ],
       "properties": {
-        "title": {
+        "drinksTitle": {
           "type": "string"
         },
-        "price": {
-          "type": "string"
-        },
-        "img": {
+        "drinksPrice": {
           "type": "string"
         }
       }
